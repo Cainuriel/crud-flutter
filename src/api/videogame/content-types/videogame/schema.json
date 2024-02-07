@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videogames",
+  "info": {
+    "singularName": "videogame",
+    "pluralName": "videogames",
+    "displayName": "Videogame"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "user_temporals": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::user-temporal.user-temporal",
+      "mappedBy": "videogames"
+    }
+  }
+}

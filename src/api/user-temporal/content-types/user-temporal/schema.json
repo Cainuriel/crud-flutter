@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_temporals",
+  "info": {
+    "singularName": "user-temporal",
+    "pluralName": "user-temporals",
+    "displayName": "UserTemporal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "unique": true
+    },
+    "username": {
+      "type": "string"
+    },
+    "videogames": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::videogame.videogame",
+      "inversedBy": "user_temporals"
+    }
+  }
+}
